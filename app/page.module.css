@@ -1,0 +1,158 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+}
+
+/* Hero Section */
+.heroSection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden; /* Prevent image from creating scrollbars */
+}
+
+/* Logo and buttons header */
+.heroHeader {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Adjusted padding */
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 0; /* Removed border radius */
+  margin: 0 auto;
+  margin-bottom: 30px; /* Added margin bottom to create space */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: auto;
+  width: auto;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryButton {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color:  #7c3aed;
+  border: 1px solid white;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0; /* Removed negative margin to increase space */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .heroHeader {
+    padding: 16px 30px;
+    margin-bottom: 25px; /* Adjusted for tablet */
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeader {
+    padding: 14px 20px;
+    margin-bottom: 20px; /* Adjusted for smaller tablets */
+  }
+
+  .buttonGroup {
+    gap: 10px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .logoImage {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeader {
+    padding: 12px 16px;
+    margin-bottom: 15px; /* Adjusted for mobile */
+  }
+
+  .buttonGroup {
+    gap: 8px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .logoImage {
+    width: 80px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .heroHeader {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px; /* Adjusted for very small screens */
+  }
+
+  .buttonGroup {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
